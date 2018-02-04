@@ -61,7 +61,7 @@ audio {
 <div class = "content">
 <p style="PADDING-TOP: 110px">
 
-<img src="https://www.dropbox.com/s/3ygdhpd8dsjjmci/livefeed.jpg?raw=1" style="box-shadow: 0px 10px 50px black" alt="lab cam" width="680" height="450">
+<img id = 'img' src="https://www.dropbox.com/s/3ygdhpd8dsjjmci/livefeed.jpg?raw=1" style="box-shadow: 0px 10px 50px black" alt="lab cam" width="680" height="450">
 </p>
 
 
@@ -87,7 +87,7 @@ audio {
      });
 
      function refresh() {
-         if(new Date().getTime() - time >= 15000) 
+         if(new Date().getTime() - time >= 2000) 
              window.location.reload(true);
          else 
              setTimeout(refresh, 10000);
