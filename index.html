@@ -1,118 +1,78 @@
-
 <html>
 <head>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.css">
-<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
-<link rel="icon" href="https://www.dropbox.com/s/clm7b6013ejsmma/favicon.ico?raw=1">
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.css">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link rel="icon" href="https://www.dropbox.com/s/clm7b6013ejsmma/favicon.ico?raw=1">
 </head>
 
 <style>
-.fixed-nav-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  width: 100%;
-  height: 80px;
-  background-color: rgba(255,0,0,0.5);
-  border-bottom: 2px solid;
-  color: white
-}
-.content {
-    max-width: 690px;
-    margin: auto;
-}
-body {
-    background-image: url("jessie_2.jpg");
-	font-family: 'Berkshire Swash', cursive;
-	letter-spacing: 3px;
-}
+    .fixed-nav-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        width: 100%;
+        height: 80px;
+        background-color: rgba(255, 0, 0, 0.5);
+        border-bottom: 2px solid;
+        color: white
+    }
 
-}
-audio { 
-   display:none;
-}
-.lower{
-	color: white;
-	
+    iframe {
+        width: 100%;
+        height: 80%;
+        transform: rotate(180deg);
 
-}
+    }
 
+    .content {
+        max-width: 690px;
+        margin: auto;
+        padding-top: 0px;
+    }
+
+    body {
+        background: url("theboyz.jpg");
+        font-family: 'Berkshire Swash', cursive;
+    }
+
+    audio {
+        display: none;
+    }
+
+    .lower {
+        color: white;
+
+
+    }
 </style>
 
 <body>
+    <nav class="fixed-nav-bar" style="font-size:40px">
+        <center>The Gentlemen of Suite 901
+        </center>
+    </nav>
 
+    <div class="content">
+        <iframe src="http://129.59.30.52:8080/javascript_simple.html" frameborder="0">
+            Your browser doesn't support iframes
+        </iframe>
+    </div>
 
-<nav class="fixed-nav-bar" style = "font-size:40px">
-<center>The Gentlemen of Suite 901
-</center>
+    <div class="lower">
+        <center>
+            <h3 style="font-size:36px">Watch us in action!</h3>
+        </center>
+    </div>
 
-
-
-
-</nav>
-
-
-<div class = "stuff">
-<div class = "content">
-<p style="PADDING-TOP: 110px">
-
-<img id = 'img' src="https://www.dropbox.com/s/3ygdhpd8dsjjmci/livefeed.jpg?raw=1" style="box-shadow: 0px 10px 50px black" alt="lab cam" width="680" height="450">
-</p>
-
-
-
-
-
-        
-<script type="text/javascript">
-    var date = new Date(2018, 1, 15);
-    var now = new Date();
-    var diff = (date.getTime()/1000) - (now.getTime()/1000);
-
-    var clock = $('.clock').FlipClock(diff,{
-        clockFace: 'DailyCounter',
-        countdown: true
-    }); 
-	
-</script>
-<script>
-     var time = new Date().getTime();
-     $(document.body).bind("mousemove keypress", function(e) {
-         time = new Date().getTime();
-     });
-
-     function refresh() {
-         if(new Date().getTime() - time >= 2000) 
-             window.location.reload(true);
-         else 
-             setTimeout(refresh, 10000);
-     }
-
-     setTimeout(refresh, 10000);
-</script>
-<div class = "lower"><center><h3 style ="font-size:36px">Watch us in action!</h3></center></div>
-
-</div>
-</div>
-
-<!-- hitwebcounter Code START -->
-<a href="http://www.hitwebcounter.com" target="_blank">
-<img src="http://hitwebcounter.com/counter/counter.php?page=6888971&style=0006&nbdigits=5&type=ip&initCount=0" title="" Alt=""   border="0" >
-</a>                                        <br/>
-                                       
-
-                                         
-<!--  add music
-<center><audio loop = "loop" autoplay= "autoplay">
-  <source src="https://www.dropbox.com/s/ma3eyyfbx5loz28/Rocketman.mp3?raw=1" type="audio/mpeg">
-</audio></center>
--->
-
+    <div class="bottom_aligner">
+        <a href="http://www.hitwebcounter.com" target="_blank">
+            <img src="http://hitwebcounter.com/counter/counter.php?page=6888971&style=0006&nbdigits=5&type=ip&initCount=0" title="" Alt=""
+                border="0">
+        </a>
+        <br/>
+    </div>
 
 </body>
-</html> 
+</html>
